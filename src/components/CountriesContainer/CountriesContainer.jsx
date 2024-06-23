@@ -32,7 +32,8 @@ const fetchCountries = async (setCountries, region) => {
 			`https://restcountries.com/v3.1/region/${REGIONS[region]}`
 		);
 		const json = await response.json();
-		setCountries(json);
+		const unMememers = json.filter(country => country.unMember);
+		setCountries(unMememers);
 	} catch (err) {
 		console.error(err);
 	}

@@ -61,6 +61,7 @@ const StyledSelect = styled.select`
 	box-shadow: 0px 0px 40px ${({ $theme }) => ($theme ? '#f2f2f2' : '#202C36')};
 	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
 	background-color: ${({ $theme }) => ($theme ? 'white' : '#2B3844')};
+	cursor: pointer;
 `;
 
 export { StyledNav, StyledSearchInput, StyledSelect, StyledInputContainer };
