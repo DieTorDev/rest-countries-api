@@ -26,8 +26,11 @@ const StyledSearchInput = styled.input`
 	height: 50px;
 	border-radius: 5px;
 	border: none;
-	filter: drop-shadow(0px 0px 10px lightgray);
+	/* filter: drop-shadow(0px 0px 10px lightgray); */
 	padding-left: 74px;
+	box-shadow: 0px 0px 40px ${({ $theme }) => ($theme ? '#f2f2f2' : '#202C36')};
+	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
+	background-color: ${({ $theme }) => ($theme ? 'white' : '#2B3844')};
 
 	&::placeholder {
 		font-size: 12px;
@@ -42,11 +45,13 @@ const StyledSelect = styled.select`
 	padding-inline: 24px;
 	border-radius: 5px;
 	border: none;
-	filter: drop-shadow(0px 0px 10px lightgray);
 	font-size: 12px;
 	font-weight: 600;
 	display: flex;
 	align-items: center;
+	box-shadow: 0px 0px 40px ${({ $theme }) => ($theme ? '#f2f2f2' : '#202C36')};
+	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
+	background-color: ${({ $theme }) => ($theme ? 'white' : '#2B3844')};
 `;
 
 export { StyledNav, StyledSearchInput, StyledSelect, StyledInputContainer };

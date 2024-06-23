@@ -7,8 +7,8 @@ const StyledHeader = styled.header`
 	align-items: center;
 	padding-inline: 16px;
 	box-shadow: -15px -15px 25px 0px black;
-	color: #111517;
-	background-color: white;
+	color: ${({ $theme }) => (!$theme ? 'white' : '#111517')};
+	background-color: ${({ $theme }) => (!$theme ? '#2B3844' : 'white')};
 `;
 
 const StyledHeaderTitle = styled.h1`
@@ -22,7 +22,7 @@ const StyledButtonTheme = styled.button`
 	font-size: 12px;
 	font-weight: 700;
 	border: none;
-	color: #111517;
+	color: ${({ $theme }) => (!$theme ? 'white' : '#111517')};
 	background-color: transparent;
 	cursor: pointer;
 	display: flex;
@@ -30,6 +30,11 @@ const StyledButtonTheme = styled.button`
 	padding: 0;
 	line-height: 25px;
 	vertical-align: baseline;
+	user-select: none;
+
+	& img {
+		filter: ${({ $theme }) => (!$theme ? 'invert(1)' : 'invert(0)')};
+	}
 `;
 
 export { StyledHeader, StyledHeaderTitle, StyledButtonTheme };

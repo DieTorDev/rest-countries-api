@@ -6,16 +6,26 @@ import {
 	StyledSearchInput,
 	StyledSelect
 } from './nav-container.styles';
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 const NavContainer = ({ region, setRegion }) => {
+	const { theme } = useContext(ThemeContext);
+
 	return (
 		<StyledNav>
 			<StyledInputContainer>
-				<StyledSearchInput type='text' placeholder='Search for a country...' />
+				<StyledSearchInput
+					$theme={theme}
+					type='text'
+					placeholder='Search for a country...'
+				/>
 			</StyledInputContainer>
 			<StyledSelect
-				onChange={event => setRegion(event.target.value)}
+				$theme={theme}
+				onChange={e => setRegion(e.target.value)}
 				name='continents'
+				value={region}
 				id=''
 			>
 				{REGIONS.map((element, i) => (

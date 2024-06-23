@@ -11,11 +11,11 @@ const StyledCardContainer = styled.section`
 const StyledCard = styled.article`
 	width: 264px;
 	height: 336px;
-	box-shadow: 0px 0px 15px lightgray;
 	border-radius: 5px;
 	overflow: hidden;
-	background-color: #f9f9f9;
-	color: #111517;
+	box-shadow: 0px 0px 40px ${({ $theme }) => ($theme ? '#f2f2f2' : '#202C36')};
+	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
+	background-color: ${({ $theme }) => ($theme ? 'white' : '#2B3844')};
 `;
 
 const StyledFlag = styled.div`

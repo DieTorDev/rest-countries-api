@@ -7,12 +7,16 @@ import {
 	StyledCountryName,
 	StyledFlag
 } from './countries-cards.styles';
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 const CountriesCards = ({ countries }) => {
+	const { theme } = useContext(ThemeContext);
+
 	return (
 		<StyledCardContainer>
 			{countries.map(country => (
-				<StyledCard key={v4()}>
+				<StyledCard $theme={theme} key={v4()}>
 					<StyledFlag>
 						<img src={country.flags.svg} alt={country.flags.alt} />
 					</StyledFlag>

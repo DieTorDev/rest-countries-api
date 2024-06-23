@@ -1,24 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import CountriesCards from '../CountriesCards/CountriesCards';
 import NavContainer from '../NavContainer/NavContainer';
 import { StyledCountriesContainer } from './countries-container.styles';
 import { REGIONS } from '../../constants/region-data';
+import { ThemeContext } from 'styled-components';
 
 const CountriesContainer = () => {
 	const [countries, setCountries] = useState();
 	const [region, setRegion] = useState(0);
 
-	console.log('RENDER');
+	const { theme } = useContext(ThemeContext);
 
 	useEffect(() => {
+		console.log('RENDER');
+
 		fetchCountries(setCountries, region);
 	}, [region]);
 
-	console.log(countries);
-
 	if (countries)
 		return (
-			<StyledCountriesContainer>
+			<StyledCountriesContainer $theme={theme}>
 				<NavContainer region={region} setRegion={setRegion} />
 				<CountriesCards countries={countries} />
 			</StyledCountriesContainer>
