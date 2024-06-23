@@ -4,6 +4,11 @@ const StyledNav = styled.nav`
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+
+	@media (min-width: 768px) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 `;
 
 const StyledInputContainer = styled.div`
@@ -18,6 +23,10 @@ const StyledInputContainer = styled.div`
 		background-image: url('/images/search-icon.svg');
 		top: 17px;
 		left: 32px;
+	}
+
+	@media (min-width: 768px) {
+		width: 480px;
 	}
 `;
 

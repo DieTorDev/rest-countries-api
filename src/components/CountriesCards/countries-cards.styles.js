@@ -3,15 +3,19 @@ import styled from 'styled-components';
 const StyledCardContainer = styled.section`
 	margin-top: 32px;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 40px;
+
+	@media (min-width: 1024px) {
+		justify-content: space-between;
+	}
 `;
 
 const StyledCard = styled.article`
 	width: 264px;
 	height: 336px;
-	border-radius: 5px;
+	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0px 0px 40px ${({ $theme }) => ($theme ? '#f2f2f2' : '#202C36')};
 	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
