@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledCardContainer = styled.section`
-	margin-top: 32px;
+	margin-top: 52px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -20,6 +20,9 @@ const StyledCard = styled.article`
 	box-shadow: 0px 0px 40px ${({ $theme }) => ($theme ? '#f2f2f2' : '#202C36')};
 	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
 	background-color: ${({ $theme }) => ($theme ? 'white' : '#2B3844')};
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 `;
 
 const StyledFlag = styled.div`
