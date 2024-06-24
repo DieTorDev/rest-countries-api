@@ -8,6 +8,7 @@ const StyledNav = styled.nav`
 	@media (min-width: 768px) {
 		flex-direction: row;
 		justify-content: space-between;
+		padding-inline: 24px;
 	}
 `;
 

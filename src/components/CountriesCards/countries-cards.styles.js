@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 const StyledCardContainer = styled.section`
-	margin-top: 52px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	padding-block: 52px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
 	gap: 40px;
+	place-items: center;
 
 	@media (min-width: 1024px) {
-		justify-content: space-between;
 	}
 `;
 
@@ -23,6 +22,7 @@ const StyledCard = styled.article`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	cursor: pointer;
 `;
 
 const StyledFlag = styled.div`

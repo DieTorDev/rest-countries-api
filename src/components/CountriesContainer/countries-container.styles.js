@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledCountriesContainer = styled.main`
-	height: 100vh;
+	min-height: 100vh;
 	padding-inline: 16px;
 	padding-top: 24px;
 	background-color: ${({ $theme }) => ($theme ? '#f2f2f2' : '#202C36')};
