@@ -4,7 +4,7 @@ import {
 	StyledHeader,
 	StyledHeaderTitle
 } from './header.styles';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const Header = () => {
 	const { theme, setTheme } = useContext(ThemeContext);

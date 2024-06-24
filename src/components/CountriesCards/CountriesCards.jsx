@@ -8,7 +8,7 @@ import {
 	StyledFlag
 } from './countries-cards.styles';
 import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const CountriesCards = ({ countries }) => {
 	const { theme } = useContext(ThemeContext);

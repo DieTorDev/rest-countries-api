@@ -3,7 +3,7 @@ import CountriesCards from '../CountriesCards/CountriesCards';
 import NavContainer from '../NavContainer/NavContainer';
 import { StyledCountriesContainer } from './countries-container.styles';
 import { REGIONS } from '../../constants/region-data';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const CountriesContainer = () => {
 	const [countries, setCountries] = useState();

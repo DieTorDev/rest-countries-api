@@ -7,7 +7,7 @@ import {
 	StyledSelect
 } from './nav-container.styles';
 import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const NavContainer = ({ region, setRegion }) => {
 	const { theme } = useContext(ThemeContext);

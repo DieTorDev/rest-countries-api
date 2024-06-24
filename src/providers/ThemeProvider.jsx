@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ThemeContext } from 'styled-components';
+import { ThemeContext } from '../context/ThemeContext';
 
 const ThemeProvider = ({ children }) => {
 	const [theme, setTheme] = useState(true);
