@@ -1,4 +1,3 @@
-import { v4 } from 'uuid';
 import {
 	StyledCard,
 	StyledCardContainer,
@@ -10,13 +9,15 @@ import {
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 
-const CountriesCards = ({ countries }) => {
+const CountriesCards = ({ countries, search }) => {
 	const { theme } = useContext(ThemeContext);
+
+	const filteredCountries = filterArray(countries, search);
 
 	return (
 		<StyledCardContainer>
-			{countries.map(country => (
-				<StyledCard $theme={theme} key={v4()}>
+			{filteredCountries.map(country => (
+				<StyledCard $theme={theme} key={country.flag}>
 					<StyledFlag>
 						<img src={country.flags.svg} alt={country.flags.alt} />
 					</StyledFlag>
@@ -36,6 +37,14 @@ const CountriesCards = ({ countries }) => {
 			))}
 		</StyledCardContainer>
 	);
+};
+
+const filterArray = (countries, search) => {
+	if (search !== '')
+		return countries.filter(country =>
+			country.name.common.toLowerCase().includes(search.toLowerCase())
+		);
+	return countries;
 };
 
 export default CountriesCards;

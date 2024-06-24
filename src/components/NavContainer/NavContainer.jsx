@@ -1,4 +1,3 @@
-import { v4 } from 'uuid';
 import { REGIONS } from '../../constants/region-data';
 import {
 	StyledInputContainer,
@@ -9,7 +8,7 @@ import {
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 
-const NavContainer = ({ region, setRegion }) => {
+const NavContainer = ({ region, setRegion, setSearch }) => {
 	const { theme } = useContext(ThemeContext);
 
 	return (
@@ -17,6 +16,7 @@ const NavContainer = ({ region, setRegion }) => {
 			<StyledInputContainer>
 				<StyledSearchInput
 					$theme={theme}
+					onInput={({ target }) => setSearch(target.value)}
 					type='text'
 					placeholder='Search for a country...'
 				/>
@@ -29,8 +29,8 @@ const NavContainer = ({ region, setRegion }) => {
 				id=''
 			>
 				{REGIONS.map((element, i) => (
-					<option key={v4()} value={i} name={element}>
-						{element}
+					<option key={element.id} value={i} name={element}>
+						{element.region}
 					</option>
 				))}
 			</StyledSelect>
