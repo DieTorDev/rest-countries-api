@@ -2,10 +2,13 @@ import { useContext, useEffect, useState } from 'react';
 import { DetailsContext } from '../../context/DetailsContext';
 import {
 	StyledInfoContainer,
+	StyledInfoData,
+	StyledInfoFirst,
 	StyledInfoFlag,
 	StyledInfoName
 } from './details-info.styles';
 import { ThemeContext } from '../../context/ThemeContext';
+import BorderCountries from '../BorderCountries/BorderCountries';
 
 const DetailsInfo = () => {
 	const [info, setInfo] = useState();
@@ -24,6 +27,26 @@ const DetailsInfo = () => {
 				</StyledInfoFlag>
 				<div>
 					<StyledInfoName $theme={theme}>{info[0].name.common}</StyledInfoName>
+					<div>
+						<StyledInfoFirst $theme={theme}>
+							<StyledInfoData>
+								<strong>Native Name:</strong> {info[0].name.nativeName.common}
+							</StyledInfoData>
+							<StyledInfoData>
+								<strong>Population:</strong> {info[0].population}
+							</StyledInfoData>
+							<StyledInfoData>
+								<strong>Region:</strong> {info[0].region}
+							</StyledInfoData>
+							<StyledInfoData>
+								<strong>Sub Region:</strong> {info[0].subregion}
+							</StyledInfoData>
+							<StyledInfoData>
+								<strong>Capital:</strong> {info[0].capital}
+							</StyledInfoData>
+						</StyledInfoFirst>
+					</div>
+					<BorderCountries info={info} />
 				</div>
 			</StyledInfoContainer>
 		);

@@ -20,4 +20,21 @@ const StyledInfoName = styled.h1`
 	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
 `;
 
-export { StyledInfoContainer, StyledInfoFlag, StyledInfoName };
+const StyledInfoFirst = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	color: ${({ $theme }) => (!$theme ? '#f2f2f2' : '#111517')};
+`;
+
+const StyledInfoData = styled.p`
+	margin: 0;
+`;
+
+export {
+	StyledInfoContainer,
+	StyledInfoFlag,
+	StyledInfoName,
+	StyledInfoFirst,
+	StyledInfoData
+};
