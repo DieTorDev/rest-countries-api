@@ -10,11 +10,13 @@ import { ThemeContext } from '../../context/ThemeContext';
 const BorderCountries = ({ info }) => {
 	const { theme } = useContext(ThemeContext);
 
+	console.log(info[0]);
+
 	return (
 		<StyledBorderCountries>
 			<StyledBorderTitle $theme={theme}>Border Countries:</StyledBorderTitle>
 			<div>
-				{info[0].borders.map(border => (
+				{info[0].borders?.map(border => (
 					<StyledBorderButton $theme={theme} key={v4()}>
 						{border}
 					</StyledBorderButton>

@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from 'react';
-import { DetailsContext } from '../../context/DetailsContext';
 import {
 	StyledInfoContainer,
 	StyledInfoData,
@@ -9,15 +8,21 @@ import {
 } from './details-info.styles';
 import { ThemeContext } from '../../context/ThemeContext';
 import BorderCountries from '../BorderCountries/BorderCountries';
+import { useLocation } from 'react-router-dom';
 
 const DetailsInfo = () => {
 	const [info, setInfo] = useState();
-	const { details } = useContext(DetailsContext);
+	const {
+		state: { name }
+	} = useLocation();
+
 	const { theme } = useContext(ThemeContext);
 
+	console.log(name.toLowerCase());
+
 	useEffect(() => {
-		fetchDetails(details.toLowerCase(), setInfo);
-	}, [details, setInfo]);
+		fetchDetails(name.toLowerCase(), setInfo);
+	}, [name, setInfo]);
 
 	if (info)
 		return (

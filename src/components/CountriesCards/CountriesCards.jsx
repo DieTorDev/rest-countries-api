@@ -9,11 +9,9 @@ import {
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Link } from 'react-router-dom';
-import { DetailsContext } from '../../context/DetailsContext';
 
 const CountriesCards = ({ countries, search }) => {
 	const { theme } = useContext(ThemeContext);
-	const { setDetails } = useContext(DetailsContext);
 
 	const filteredCountries = filterArray(countries, search);
 
@@ -23,7 +21,7 @@ const CountriesCards = ({ countries, search }) => {
 				<Link
 					to='/details'
 					key={country.flag}
-					onClick={() => setDetails(country.name.common)}
+					state={{ name: country.name.common }}
 				>
 					<StyledCard $theme={theme}>
 						<StyledFlag>
