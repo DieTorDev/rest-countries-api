@@ -6,15 +6,15 @@
 
 ## Ejemplo en vivo
 
-- [Vista en vivo](https://todolist-yioe.onrender.com)
+- [Vista en vivo](https://fun-with-flags-ntj5.onrender.com/)
 
 ## Descripción 📑
 
-Es un prototipo de ToDo list que busca ser eficiente y efectiva.
+Aplicación que muestra información relevante sobre los 196 paieses del mundo a través de una API.
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻
 
-Manejo de de eventos y control de elementos del DOM desde JavaScript y React, uso de estados y contextos de React Router Dom. 
+Consumo de APIs y gestion de datos a través de React y JavaScript, uso de hooks y gestión del DOM. 
 
 ## Tecnologías 🛠
 
