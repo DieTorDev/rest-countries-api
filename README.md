@@ -1,7 +1,7 @@
 # ToDo list
 <p align="center">
-  <img src="https://github.com/DieTorDev/todo-list/blob/main/screenshots/day-mode.png" />
-  <img src="https://github.com/DieTorDev/todo-list/blob/main/screenshots/night-mode.png" />
+  <img src="https://github.com/DieTorDev/rest-countries-api/blob/main/screenshots/theme-day.png" />
+  <img src="https://github.com/DieTorDev/rest-countries-api/blob/main/screenshots/theme-night.png" />
 </p>
 
 ## Ejemplo en vivo
